@@ -1,0 +1,252 @@
+<?php
+/*
+$form = $this->form;
+
+
+$form->prepare();
+ 
+echo $this->form()->openTag($form);
+
+
+ 
+echo $this->formRow($form->get('fileupload'));
+ 
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();*/
+?>
+
+<div class="page-content">
+    <div class="page-header position-relative">
+        <h1>
+           Sign UP
+            
+        </h1>
+    </div><!--/.page-header-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <!--PAGE CONTENT BEGINS-->
+
+            <?php
+            echo  $this->url('merchant',array('action'=>'add'));
+           
+                //$form->setAttribute('action', $this->url('merchant',array('controller'=>'index','action'=>'add')));
+                $form->setAttribute('action',"/merchant/index/add/");
+                $form->setAttribute('class', 'form-horizontal');
+                 $form->prepare();
+                 echo $this->form()->openTag($form);
+                 echo $this->formRow($form->get('merchant_id'));
+                 ?>
+                <div class="control-group">
+                    <label for="url" class="control-label">Your Name</label>
+
+                    <div class="controls">
+                        <!--<input type="text" placeholder="eg. http://www.youtube.com/jksdhfkjds" id="url"> -->
+                        <?php echo $this->formRow($form->get('name'));?>
+                    </div>
+                </div>
+            
+                <div class="control-group">
+                    <label for="url" class="control-label">Your Address</label>
+
+                    <div class="controls">
+                        <!--<input type="text" placeholder="eg. http://www.youtube.com/jksdhfkjds" id="url"> -->
+                        <?php echo $this->formRow($form->get('address'));;?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    
+                   <!-- <div class="ace-file-input">
+                        <input type="file" id="id-input-file-2">
+                        <label data-title="Choose"><span data-title="No File ...">
+                                <i class="icon-upload-alt"></i></span></label>
+                        <a href="#" class="remove"><i class="icon-remove"></i></a>
+                    </div> -->
+                    
+                    <label for="url" class="control-label">City</label>
+
+                    <div class="controls">
+                        <?php echo $this->formRow($form->get('city'));?>
+                        <!--  <div class="ace-file-input span4">
+                            
+                          <label data-title="Choose"><span data-title="No File ...">
+                                    <i class="icon-upload-alt"></i></span></label>
+                            <a href="#" class="remove"><i class="icon-remove"></i></a> 
+                         </div>-->
+                      
+                        
+                    </div>
+                </div>
+            
+            <div class="control-group">
+                    <label for="url" class="control-label">State</label>
+
+                    <div class="controls">
+                        <!--<input type="text" placeholder="eg. http://www.youtube.com/jksdhfkjds" id="url"> -->
+                        <?php echo $this->formRow($form->get('state'));?>
+                    </div>
+                </div>
+            <div class="control-group">
+                    <label for="url" class="control-label">Pincode</label>
+
+                    <div class="controls">
+                        <!--<input type="text" placeholder="eg. http://www.youtube.com/jksdhfkjds" id="url"> -->
+                        <?php echo $this->formRow($form->get('pincode'));?>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="status" class="control-label">country</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('country'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                 <div class="control-group">
+                    <label for="status" class="control-label">Phone</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('phone'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                 <div class="control-group">
+                    <label for="status" class="control-label">Mobile</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('mobile'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="control-group">
+                    <label for="status" class="control-label">Company Name</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('company_name'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="control-group">
+                    <label for="status" class="control-label">Email</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('email'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="control-group">
+                    <label for="status" class="control-label">Specialisation</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('specialisation'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="control-group">
+                    <label for="status" class="control-label">Delivery Range</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('delivery_range'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="control-group">
+                    <label for="status" class="control-label">Password</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('password'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="control-group">
+                    <label for="status" class="control-label"> Confirm Password</label>
+
+                    <div class="controls">
+                      
+                        <label>
+                            <?php echo $this->formRow($form->get('cpassword'));?>
+                            <span class="lbl"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+            
+            <div class="form-actions">
+              <!--  <button type="button" class="btn btn-info">
+                    <i class="icon-ok bigger-110"></i>
+                    Submit
+                </button>
+                company_name'=>$merchant->company_name,
+             'email'=>$merchant->email,
+             'specialisation'=>$merchant->specialisation,
+             'delivery_range'=>$merchant->delivery_range,
+             'password'=>$merchant->password,
+               --> 
+                <?php echo $this->formRow($form->get('submit'));?>
+            </div>
+            
+                <?php
+                 echo $this->form()->closeTag();
+                ?>
+                
+            </div><!--PAGE CONTENT ENDS-->
+        </div><!--/.span-->
+    </div><!--/.row-fluid-->
